@@ -1,5 +1,5 @@
 <li>
-    <a href="{{route('home.show',array('id'=>$project_id))}}" class="box" title="{{$project_name}}">
+    <a href="{{route('home.show',array('id'=>$project_id))}}" class="box" title="{{$project_name}}" target="_self">
         <div class="pull-left imgbox">
             <i class="fa fa-desktop"></i>
         </div>
