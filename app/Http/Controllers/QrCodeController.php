@@ -29,7 +29,7 @@ class QrCodeController extends Controller
             if (empty($project)) {
                 abort(404);
             }
-            $url = route('home.show', ['id' => $projectId]);
+            $url = route('document.show', ['id' => $projectId]);
 
             $png = QrCode::format('png')->margin(1)->size(160)->generate($url);
           // var_dump(dirname($path));exit;

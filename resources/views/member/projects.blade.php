@@ -66,7 +66,7 @@
                                         <a href="{{route('document.index',['id'=>$item->project_id])}}" title="编辑文档" data-toggle="tooltip" data-placement="bottom" target="_blank">{{$item->project_name}}</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="{{route('home.show',['id'=>$item->project_id])}}" title="查看文档" style="font-size: 12px;" data-toggle="tooltip" data-placement="bottom"  target="_blank"><i class="fa fa-eye"></i> 查看</a>
+                                        <a href="{{route('document.show',['id'=>$item->project_id])}}" title="查看文档" style="font-size: 12px;" data-toggle="tooltip" data-placement="bottom"  target="_blank"><i class="fa fa-eye"></i> 查看</a>
                                         @if($member->group_level === 0)
                                             <a href="{{route('project.members',['id'=>$item->project_id])}}" class="project-user-btn" title="管理文档成员" data-toggle="tooltip" data-placement="bottom"  style="font-size: 12px;"><i class="fa fa-user-plus"></i> 用户</a>
                                             <a href="{{route('project.edit',['id'=>$item->project_id])}}" title="编辑项目" data-toggle="tooltip" data-placement="left"  style="font-size: 12px;"><i class="fa fa-pencil"></i> 编辑</a>
