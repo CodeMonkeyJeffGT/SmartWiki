@@ -157,8 +157,8 @@ if(!function_exists('system_install')) {
     {
 
         $matches = array();
-        if (!preg_match('/^[a-zA-Z][a-zA-Z0-9_]{4,19}$/', $account, $matches)) {
-            throw new \Exception('Account is required, and should have more than 4 characters and less than 19 characters',40508);
+        if (!preg_match('/^[a-zA-Z][a-zA-Z0-9_]{3,19}$/', $account, $matches)) {
+            throw new \Exception('Account is required, and should have more than 3 characters and less than 19 characters',40508);
         }
         if (empty($password) || strlen($password) < 6 || strlen($password) > 18) {
             throw new \Exception('Password is required, and should have more than 6 characters and less than 18 characters',1000001);

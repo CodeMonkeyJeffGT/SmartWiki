@@ -86,8 +86,8 @@ class Member extends ModelBase
             throw new ArgumentNullException('账号不能为空',40507);
         }
         $matches = array();
-        if($member->member_id<=0 and !preg_match('/^[a-zA-Z][a-zA-Z0-9_]{4,19}$/',$member->account,$matches)){
-            throw new FormatException('账号必须以英文字母开头并且大于5个字符小于20个字符',40508);
+        if($member->member_id<=0 and !preg_match('/^[a-zA-Z][a-zA-Z0-9_]{3,19}$/',$member->account,$matches)){
+            throw new FormatException('账号必须以英文字母开头并且大于3个字符小于20个字符',40508);
         }
 
         if(empty($member->nickname) === false and mb_strlen($member->nickname) > 20){
